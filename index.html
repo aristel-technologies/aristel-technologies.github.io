@@ -1,61 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>ARISTEL Technologies</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
     body {
-      font-family: Arial;
       background: #0b0f19;
-      color: blue;
+      color: #e6e6e6;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      height: 90vh;
+      background: url("cover.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding-top: 120px;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.65);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
     }
 
     h1 {
       font-size: 48px;
-       color: #7ec8ff;
+      color: #7ec8ff;
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
       color: #b0b8c5;
-    }
-     footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      padding: 15px 10px;
-      background: rgba(11, 15, 25, 0.85);
-      backdrop-filter: blur(6px);
-      color: #6b7785;
-      font-size: 14px;
-    } footer a {
-      color: #8fd3ff;
-      text-decoration: none;
+      margin-top: 10px;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #7ec8ff;
+      color: #0b0f19;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #5fb8ff;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #7ec8ff;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #121a2b;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a0e18;
+      padding: 30px;
+      text-align: center;
+      color: #6b7785;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #7ec8ff;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
-  
-  <h1>ARISTEL Technologies</h1>
-  <p>Votre partenaire fiable en technologie et en talents.</p>
-  <p>Bientôt disponible...</p>
-   <footer>
-    <p>&copy; 2026 ARISTEL Technologies. Tous droits réservés.</p>
-    <p style="margin-top: 10px;">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <img src="logo.png" alt="ARISTEL Logo" class="logo">
+
+      <h1>ARISTEL Technologies</h1>
+      <p>Tech & Talent Solutions for the future</p>
+      <p>We build connections between technology and people.</p>
+
+      <a href="mailto:aristeltechnologies@gmail.com" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <h2>About Us</h2>
+    <p>
+      ARISTEL Technologies is a future-focused company aiming to provide digital
+      solutions and connect talent with technology opportunities.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Software Development</h3>
+        <p>Custom digital solutions and applications.</p>
+      </div>
+
+      <div class="card">
+        <h3>Talent Solutions</h3>
+        <p>Connecting skilled professionals with opportunities.</p>
+      </div>
+
+      <div class="card">
+        <h3>Digital Consulting</h3>
+        <p>Helping businesses go digital and scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <h2>Contact</h2>
+    <p>Email: aristeltechnologies@gmail.com</p>
+    <p>
       <a href="https://www.linkedin.com/company/aristel-technologies/" target="_blank">
-        Connect on LinkedIn
+        LinkedIn Page
       </a>
     </p>
-     <p style="margin-top: 10px;">
-    <a href="mailto:aristeltechnologies@gmail.com">aristeltechnologies@gmail.com</a>
-  </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 ARISTEL Technologies. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
