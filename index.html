@@ -17,6 +17,21 @@
       color: #e6e6e6;
     }
 
+    /* TOP LOGO (NEW) */
+    .navbar {
+      position: absolute;
+      top: 20px;
+      left: 25px;
+      z-index: 10;
+    }
+
+    .nav-logo {
+      width: 60px;
+      height: auto;
+      opacity: 0.9;
+      border-radius: 8px;
+    }
+
     /* HERO */
     .hero {
       position: relative;
@@ -40,11 +55,6 @@
       z-index: 2;
       max-width: 800px;
       padding: 20px;
-    }
-
-    .logo {
-      width: 120px;
-      margin-bottom: 20px;
     }
 
     h1 {
@@ -131,17 +141,21 @@
 
 <body>
 
+  <!-- TOP LOGO (NEW CLEAN POSITION) -->
+  <div class="navbar">
+    <img src="logo.jpg" alt="ARISTEL Logo" class="nav-logo">
+  </div>
+
   <!-- HERO -->
   <section class="hero">
     <div class="overlay"></div>
 
     <div class="hero-content">
-      <img src="logo.jpg" alt="Logo ARISTEL" class="logo">
 
       <h1>ARISTEL Technologies</h1>
 
-      <p>Nous accompagnons la transformation digitale des entreprises grâce à des solutions numériques innovantes et des talents qualifiés</p>
-     
+      <p>Solutions numériques innovantes pour connecter les talents et accélérer la transformation digitale.</p>
+      <p>Nous accompagnons la transformation digitale des entreprises grâce à des solutions numériques et des talents qualifiés.</p>
 
       <a href="mailto:aristeltechnologies@gmail.com" class="btn">Nous contacter</a>
     </div>
@@ -162,17 +176,17 @@
     <div class="cards">
       <div class="card">
         <h3>Solutions digitales sur mesure</h3>
-        <p>Conception et développement de solutions numériques adaptées aux besoins des entreprises.</p>
+        <p>Création de solutions adaptées aux besoins des entreprises et des utilisateurs.</p>
       </div>
 
       <div class="card">
-        <h3>Recrutement & talents IT</h3>
-        <p>Mise en relation de talents qualifiés avec les entreprises et projets technologiques.</p>
+        <h3>Recrutement IT</h3>
+        <p>Mise en relation de talents et entreprises.</p>
       </div>
 
       <div class="card">
-        <h3>Conseil en transformation digitale</h3>
-        <p>Accompagnement des entreprises dans leur digitalisation et leur croissance technologique.</p>
+        <h3>Conseil digital</h3>
+        <p>Accompagnement des entreprises dans leur transformation numérique.</p>
       </div>
     </div>
   </section>
