@@ -37,8 +37,7 @@
   if (stored === "light" || stored === "dark") {
     applyTheme(stored);
   } else {
-    var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-    applyTheme(prefersLight ? "light" : "dark");
+    applyTheme("light");
   }
 
   if (themeToggle) {
@@ -95,7 +94,15 @@
     storedLang = null;
   }
 
-  applyLanguage(storedLang === "en" ? "en" : "fr");
+  var initialLang;
+  if (storedLang === "en" || storedLang === "fr") {
+    initialLang = storedLang;
+  } else {
+    var browserLang = (navigator.language || navigator.userLanguage || "fr").toLowerCase();
+    initialLang = browserLang.indexOf("fr") === 0 ? "fr" : "en";
+  }
+
+  applyLanguage(initialLang);
 
   if (langToggle) {
     langToggle.addEventListener("click", function () {
